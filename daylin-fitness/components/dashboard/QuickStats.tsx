@@ -15,7 +15,7 @@ const StatItem = ({ icon, label, value, trend, color }: StatItemProps) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
     transition={spring}
-    className="flex items-center gap-3 p-4 rounded-2xl bg-surface/50 border border-border"
+    className="flex items-center gap-3 p-4 rounded-2xl bg-surface border border-border"
   >
     <div className={`p-3 rounded-xl ${color}`}>
       {icon}
@@ -43,28 +43,28 @@ export const QuickStats = () => {
           label="Active Minutes"
           value="245"
           trend="+12% this week"
-          color="bg-yellow-500/10"
+          color="bg-yellow-900"
         />
         <StatItem
           icon={<Activity className="w-6 h-6 text-blue-500" />}
           label="Avg Heart Rate"
           value="142 bpm"
           trend="+5 bpm"
-          color="bg-blue-500/10"
+          color="bg-blue-900"
         />
         <StatItem
           icon={<Target className="w-6 h-6 text-green-500" />}
           label="Goals Hit"
           value="18/21"
           trend="86% success"
-          color="bg-green-500/10"
+          color="bg-green-900"
         />
         <StatItem
           icon={<TrendingUp className="w-6 h-6 text-purple-500" />}
           label="Weight Lifted"
           value="2.4k lbs"
           trend="+18% this week"
-          color="bg-purple-500/10"
+          color="bg-purple-900"
         />
       </div>
     </Card>

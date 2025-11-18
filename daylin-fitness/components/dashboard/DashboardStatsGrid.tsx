@@ -1,9 +1,9 @@
 import { ProgressRing } from "./ProgressRing";
 import { StreakFire } from "./StreakFire";
 import { AIDailyInsight } from "./AIDailyInsight";
-import { QuickStats } from "./QuickStats";
-import { WeeklyProgress } from "./WeeklyProgress";
-import { RecentWorkouts } from "./RecentWorkouts";
+// import { QuickStats } from "./QuickStats";
+// import { WeeklyProgress } from "./WeeklyProgress";
+// import { RecentWorkouts } from "./RecentWorkouts";
 
 export const DashboardStatsGrid = () => {
   return (
@@ -26,13 +26,13 @@ export const DashboardStatsGrid = () => {
       </div>
 
       {/* Quick Stats */}
-      <QuickStats />
+      {/* <QuickStats /> */}
 
       {/* Weekly Progress Chart */}
-      <WeeklyProgress />
+      {/* <WeeklyProgress /> */}
 
       {/* Recent Workouts */}
-      <RecentWorkouts />
+      {/* <RecentWorkouts /> */}
     </>
   );
 };

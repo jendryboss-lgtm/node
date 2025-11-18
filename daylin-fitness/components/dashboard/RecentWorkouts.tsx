@@ -60,9 +60,9 @@ export const RecentWorkouts = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="flex items-center gap-4 p-4 rounded-2xl bg-surface/50 border border-border hover:border-primary/30 transition-colors cursor-pointer"
+            className="flex items-center gap-4 p-4 rounded-2xl bg-surface border border-border hover:border-primary transition-colors cursor-pointer"
           >
-            <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-green-900 flex items-center justify-center flex-shrink-0">
               <CheckCircle className="w-6 h-6 text-green-500" />
             </div>
 
