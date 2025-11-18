@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme */
+  --background: #F5F5F5;
+  --surface: #FFFFFF;
+  --primary: #E63946;
+  --primary-hover: #D62839;
+  --border: #E0E0E0;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B7280;
+}
+
+.dark {
+  /* Dark theme */
+  --background: #0F0F0F;
+  --surface: #1A1A1A;
+  --primary: #E63946;
+  --primary-hover: #FF4757;
+  --border: #2A2A2A;
+  --text-primary: #F5F5F5;
+  --text-secondary: #9CA3AF;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Glow animation for progress rings */
+  @keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 20px rgba(230, 57, 70, 0.5));
+    }
+    50% {
+      filter: drop-shadow(0 0 30px rgba(230, 57, 70, 0.8));
+    }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+}
