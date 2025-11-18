@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daylin Fitness - Dashboard Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --background: #0F0F0F;
+            --surface: #1A1A1A;
+            --primary: #E63946;
+            --border: #2A2A2A;
+            --text-primary: #F5F5F5;
+            --text-secondary: #9CA3AF;
+        }
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #E63946 0%, #8A2BE2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .fire-gradient {
+            background: linear-gradient(135deg, #FF6B35 0%, #E63946 50%, #FFB300 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-12">
+            <h1 class="text-5xl font-black gradient-text">Welcome back</h1>
+            <button class="p-3 rounded-full card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Progress Rings -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- Calories -->
+            <div class="flex flex-col items-center">
+                <div class="relative w-40 h-40">
+                    <svg class="w-full h-full -rotate-90">
+                        <circle cx="80" cy="80" r="70" stroke="#222" stroke-width="12" fill="none" opacity="0.3"/>
+                        <circle cx="80" cy="80" r="70" stroke="#E63946" stroke-width="12" fill="none"
+                                stroke-dasharray="439.8" stroke-dashoffset="167.3" stroke-linecap="round"
+                                style="filter: drop-shadow(0 0 20px rgba(230,57,70,0.5))"/>
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <span class="text-4xl font-black">62%</span>
+                        <span class="text-sm text-gray-400">Calories</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recovery -->
+            <div class="flex flex-col items-center">
+                <div class="relative w-40 h-40">
+                    <svg class="w-full h-full -rotate-90">
+                        <circle cx="80" cy="80" r="70" stroke="#222" stroke-width="12" fill="none" opacity="0.3"/>
+                        <circle cx="80" cy="80" r="70" stroke="#00C853" stroke-width="12" fill="none"
+                                stroke-dasharray="439.8" stroke-dashoffset="61.6" stroke-linecap="round"
+                                style="filter: drop-shadow(0 0 20px rgba(0,200,83,0.5))"/>
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <span class="text-4xl font-black">86%</span>
+                        <span class="text-sm text-gray-400">Recovery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strength -->
+            <div class="flex flex-col items-center">
+                <div class="relative w-40 h-40">
+                    <svg class="w-full h-full -rotate-90">
+                        <circle cx="80" cy="80" r="70" stroke="#222" stroke-width="12" fill="none" opacity="0.3"/>
+                        <circle cx="80" cy="80" r="70" stroke="#8A2BE2" stroke-width="12" fill="none"
+                                stroke-dasharray="439.8" stroke-dashoffset="35.2" stroke-linecap="round"
+                                style="filter: drop-shadow(0 0 20px rgba(138,43,226,0.5))"/>
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <span class="text-4xl font-black">92%</span>
+                        <span class="text-sm text-gray-400">Strength</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Streak -->
+            <div class="md:col-span-3 flex justify-center">
+                <div class="flex flex-col items-center">
+                    <div class="text-9xl font-black fire-gradient leading-none">21</div>
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="text-orange-500 text-4xl animate-pulse">🔥</span>
+                        <span class="text-xl font-bold">DAY STREAK</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Insight -->
+            <div class="md:col-span-3">
+                <div class="card" style="background: linear-gradient(135deg, rgba(230,57,70,0.1) 0%, rgba(138,43,226,0.1) 100%); border-color: rgba(230,57,70,0.3);">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E63946" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg flex items-center gap-2">
+                                AI Daily Insight
+                                <span class="text-xs bg-red-500/20 px-2 py-1 rounded-full">Live Adaptation</span>
+                            </h3>
+                            <p class="mt-2 leading-relaxed">Your HRV jumped 18% overnight — we increased lower body volume 12%. You're in peak form! 🔥</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="card mb-8">
+            <h2 class="text-2xl font-black mb-6">Quick Stats</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="flex items-center gap-3 p-4 rounded-2xl bg-yellow-500/10 border border-gray-700">
+                    <div class="text-4xl">⚡</div>
+                    <div>
+                        <p class="text-sm text-gray-400">Active Minutes</p>
+                        <p class="text-2xl font-black">245</p>
+                        <p class="text-xs text-green-500">+12% this week</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 rounded-2xl bg-blue-500/10 border border-gray-700">
+                    <div class="text-4xl">💓</div>
+                    <div>
+                        <p class="text-sm text-gray-400">Avg Heart Rate</p>
+                        <p class="text-2xl font-black">142 bpm</p>
+                        <p class="text-xs text-green-500">+5 bpm</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 rounded-2xl bg-green-500/10 border border-gray-700">
+                    <div class="text-4xl">🎯</div>
+                    <div>
+                        <p class="text-sm text-gray-400">Goals Hit</p>
+                        <p class="text-2xl font-black">18/21</p>
+                        <p class="text-xs text-green-500">86% success</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 rounded-2xl bg-purple-500/10 border border-gray-700">
+                    <div class="text-4xl">📈</div>
+                    <div>
+                        <p class="text-sm text-gray-400">Weight Lifted</p>
+                        <p class="text-2xl font-black">2.4k lbs</p>
+                        <p class="text-xs text-green-500">+18% this week</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weekly Progress -->
+        <div class="card mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-black">Weekly Activity</h2>
+                <div class="flex items-center gap-2 text-sm text-gray-400">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <span>Goal Completion</span>
+                </div>
+            </div>
+            <div class="flex items-end justify-between gap-4 h-64">
+                <div class="flex-1 flex flex-col items-center gap-2">
+                    <div class="w-full rounded-t-lg bg-gradient-to-t from-red-500 to-purple-600" style="height: 170px;"></div>
+                    <span class="text-sm font-semibold text-gray-400">Mon</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-2">
+                    <div class="w-full rounded-t-lg bg-gradient-to-t from-red-500 to-purple-600" style="height: 184px;"></div>
+                    <span class="text-sm font-semibold text-gray-400">Tue</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-2">
+                    <div class="w-full rounded-t-lg bg-gradient-to-t from-red-500 to-purple-600" style="height: 156px;"></div>
+                    <span class="text-sm font-semibold text-gray-400">Wed</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-2">
+                    <div class="w-full rounded-t-lg bg-gradient-to-t from-red-500 to-purple-600" style="height: 190px;"></div>
+                    <span class="text-sm font-semibold text-gray-400">Thu</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-2">
+                    <div class="w-full rounded-t-lg bg-gradient-to-t from-red-500 to-purple-600" style="height: 176px;"></div>
+                    <span class="text-sm font-semibold text-gray-400">Fri</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-2">
+                    <div class="w-full rounded-t-lg bg-gradient-to-t from-red-500 to-purple-600" style="height: 200px;"></div>
+                    <span class="text-sm font-semibold text-gray-400">Sat</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-2">
+                    <div class="w-full rounded-t-lg bg-gradient-to-t from-red-500 to-purple-600" style="height: 144px;"></div>
+                    <span class="text-sm font-semibold text-gray-400">Sun</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Workouts -->
+        <div class="card mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-black">Recent Workouts</h2>
+                <button class="text-sm px-4 py-2 hover:bg-red-500/10 rounded-full">View All</button>
+            </div>
+            <div class="space-y-4">
+                <div class="flex items-center gap-4 p-4 rounded-2xl bg-gray-800/50 border border-gray-700">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
+                        <span class="text-green-500 text-2xl">✓</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold">HIIT Cardio Blast</h3>
+                        <p class="text-sm text-gray-400">Today, 7:30 AM</p>
+                    </div>
+                    <div class="flex gap-6 text-sm text-gray-400">
+                        <span>⏱ 20 min</span>
+                        <span class="text-orange-500 font-semibold">🔥 245 cal</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-4 rounded-2xl bg-gray-800/50 border border-gray-700">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
+                        <span class="text-green-500 text-2xl">✓</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold">Core Strength</h3>
+                        <p class="text-sm text-gray-400">Yesterday, 6:00 PM</p>
+                    </div>
+                    <div class="flex gap-6 text-sm text-gray-400">
+                        <span>⏱ 15 min</span>
+                        <span class="text-orange-500 font-semibold">🔥 180 cal</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-4 rounded-2xl bg-gray-800/50 border border-gray-700">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
+                        <span class="text-green-500 text-2xl">✓</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold">Full Body Power</h3>
+                        <p class="text-sm text-gray-400">2 days ago</p>
+                    </div>
+                    <div class="flex gap-6 text-sm text-gray-400">
+                        <span>⏱ 30 min</span>
+                        <span class="text-orange-500 font-semibold">🔥 320 cal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center text-gray-500 text-sm py-8">
+            <p>🔥 Daylin Fitness Dashboard Preview</p>
+            <p class="mt-2">Built with Next.js 15 + TypeScript + Tailwind CSS + Framer Motion</p>
+        </div>
+    </div>
+</body>
+</html>

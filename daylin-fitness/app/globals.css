@@ -4,24 +4,24 @@
 
 :root {
   /* Light theme */
-  --background: #F5F5F5;
-  --surface: #FFFFFF;
-  --primary: #E63946;
-  --primary-hover: #D62839;
-  --border: #E0E0E0;
-  --text-primary: #1A1A1A;
-  --text-secondary: #6B7280;
+  --background: 245 245 245;
+  --surface: 255 255 255;
+  --primary: 230 57 70;
+  --primary-hover: 214 40 57;
+  --border: 224 224 224;
+  --text-primary: 26 26 26;
+  --text-secondary: 107 114 128;
 }
 
 .dark {
   /* Dark theme */
-  --background: #0F0F0F;
-  --surface: #1A1A1A;
-  --primary: #E63946;
-  --primary-hover: #FF4757;
-  --border: #2A2A2A;
-  --text-primary: #F5F5F5;
-  --text-secondary: #9CA3AF;
+  --background: 15 15 15;
+  --surface: 26 26 26;
+  --primary: 230 57 70;
+  --primary-hover: 255 71 87;
+  --border: 42 42 42;
+  --text-primary: 245 245 245;
+  --text-secondary: 156 163 175;
 }
 
 @layer base {
@@ -48,7 +48,7 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary/50;
+    background-color: rgba(230, 57, 70, 0.5);
   }
 }
 
